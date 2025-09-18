@@ -11,14 +11,14 @@
     "href": "index.html",
     "title": "Simple Quarto Website",
     "section": "",
-    "text": "This page demonstrates required Quarto features for the lab.\nWe include headings, columns, lists, tables, math, images, video, Mermaid diagrams, and citations.[^why]\n\n\nSome brief summary text. We can cite prior work like (CITE_KEY_1?) to demonstrate bibliography integration.\n\n\n\n\n\nThis is a bulleted list\nWith multiple items\nShowing markdown basics\n\nInline math example: the quadratic formula uses \\(b^2 - 4ac\\) under a square root.\n\n\n\n\nA short paragraph of placeholder text.\n\n“Good documentation is a love letter to your future self.”\n\n\n\n\n\n\n\nA simple markdown table:\n\n\n\nMetric\nValue\nNotes\n\n\n\n\nAccuracy\n0.93\nAfter tuning\n\n\nF1 Score\n0.91\nBalanced classes\n\n\nThroughput\n120/s\nCPU-only baseline\n\n\n\nDisplay math (non-inline):\n\\[\n\\int_{0}^{1} x^2 \\, dx \\;=\\; \\frac{1}{3}\n\\]\n\n\n\nTwo embedded images from the local images/ folder:\n \n\n\n\nAn embedded YouTube video using a responsive iframe:\n\n \n\n\n\n\n\nflowchart TD A[Start] –&gt; B{Decision?} B –&gt;|Yes| C[Do this] B –&gt;|No| D[Do that instead] C –&gt; E[Finish] D –&gt; E[Finish]\n\n\n\n\nAs noted by Anscombe (2006), philosophy of mind has a long history.\nMore recently, ethical debates have been reframed in modern contexts Wood (2020)."
+    "text": "This page demonstrates required Quarto features for the lab. Including headings, columns, lists, tables, math, images, video, Mermaid diagrams, and citations.\n\n\nSome brief summary text.\n\n\n\n\n\nThis is a bulleted list\nWith multiple items\nShowing markdown basics\n\nInline math example: the quadratic formula uses \\(b^2 - 4ac\\) under a square root.\n\n\n\n\nA short paragraph of placeholder text.\n\n“Good documentation is a love letter to your future self.”\n\n\n\n\n\n\n\nA simple markdown table:\n\n\n\nMetric\nValue\nNotes\n\n\n\n\nAccuracy\n0.93\nAfter tuning\n\n\nF1 Score\n0.91\nBalanced classes\n\n\nThroughput\n120/s\nCPU-only baseline\n\n\n\nDisplay math (non-inline):\n\\[\n\\int_{0}^{1} x^2 \\, dx \\;=\\; \\frac{1}{3}\n\\]\n\n\n\nTwo embedded images from the local images/ folder:\n \n\n\n\nAn embedded YouTube video using a responsive iframe:\n\n \n\n\n\n\n\nflowchart TD A[Start] –&gt; B{Decision?} B –&gt;|Yes| C[Do this] B –&gt;|No| D[Do that instead] C –&gt; E[Finish] D –&gt; E[Finish]\n\n\n\n\nAs noted by Anscombe (2006), philosophy of mind has a long history.\nMore recently, ethical debates have been reframed in modern contexts Wood (2020)."
   },
   {
     "objectID": "index.html#professional-overview",
     "href": "index.html#professional-overview",
     "title": "Simple Quarto Website",
     "section": "",
-    "text": "Some brief summary text. We can cite prior work like (CITE_KEY_1?) to demonstrate bibliography integration.\n\n\n\n\n\nThis is a bulleted list\nWith multiple items\nShowing markdown basics\n\nInline math example: the quadratic formula uses \\(b^2 - 4ac\\) under a square root.\n\n\n\n\nA short paragraph of placeholder text.\n\n“Good documentation is a love letter to your future self.”"
+    "text": "Some brief summary text.\n\n\n\n\n\nThis is a bulleted list\nWith multiple items\nShowing markdown basics\n\nInline math example: the quadratic formula uses \\(b^2 - 4ac\\) under a square root.\n\n\n\n\nA short paragraph of placeholder text.\n\n“Good documentation is a love letter to your future self.”"
   },
   {
     "objectID": "index.html#table-example",
@@ -54,5 +54,19 @@
     "title": "Simple Quarto Website",
     "section": "",
     "text": "As noted by Anscombe (2006), philosophy of mind has a long history.\nMore recently, ethical debates have been reframed in modern contexts Wood (2020)."
+  },
+  {
+    "objectID": "slides/slides.html#welcome",
+    "href": "slides/slides.html#welcome",
+    "title": "DSAN 5000 — Mini Deck",
+    "section": "Welcome",
+    "text": "Welcome\nThis is a short reveal.js deck made with Quarto + Jupyter Notebook.\nI will cite one of our references here: see Anscombe (2006) for background, and a more modern take in Wood (2020)."
+  },
+  {
+    "objectID": "slides/slides.html#key-points",
+    "href": "slides/slides.html#key-points",
+    "title": "DSAN 5000 — Mini Deck",
+    "section": "Key Points",
+    "text": "Key Points\n\nBuilt with Quarto + reveal.js\nAuthored as a Jupyter Notebook (.ipynb)\nImages, citations, and code supported\n\n\n\n\n\nAnscombe, G. E. M. 2006. Metaphysics and the Philosophy of Mind. Royal National Institute for the Blind.\n\n\nWood, Nathan. 2020. Virtue Rediscovered: Deontology, Consequentialism, and Virtue Ethics in the Contemporary Moral Landscape. Lexington Books."
   }
 ]

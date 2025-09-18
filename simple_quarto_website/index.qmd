@@ -10,12 +10,11 @@ format:
 
 # Welcome
 
-This page demonstrates required Quarto features for the lab.  
-We include headings, columns, lists, tables, math, images, video, Mermaid diagrams, and citations.[^why]
+This page demonstrates required Quarto features for the lab. Including headings, columns, lists, tables, math, images, video, Mermaid diagrams, and citations.
 
 ## Professional Overview
 
-Some brief summary text. We can cite prior work like @CITE_KEY_1 to demonstrate bibliography integration.
+Some brief summary text. 
 
 ::: { .columns }
 ::: { .column width="50%" }

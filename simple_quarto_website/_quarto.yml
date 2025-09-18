@@ -9,6 +9,8 @@ website:
         text: Home
       - href: about.ipynb
         text: about
+      - href: slides/slides.ipynb
+        text: Slides
 
 format:
   html:
