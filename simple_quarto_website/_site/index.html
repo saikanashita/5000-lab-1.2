@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>simple_quarto_website</title>
+<title>Simple Quarto Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f93c2b1f3f0577f377aefa4848a86a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">simple_quarto_website</span>
+    <span class="navbar-title">Simple Quarto Website</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -110,15 +159,29 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <ul class="collapse">
+  <li><a href="#professional-overview" id="toc-professional-overview" class="nav-link" data-scroll-target="#professional-overview">Professional Overview</a></li>
+  <li><a href="#table-example" id="toc-table-example" class="nav-link" data-scroll-target="#table-example">Table Example</a></li>
+  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images">Images</a></li>
+  <li><a href="#embedded-video" id="toc-embedded-video" class="nav-link" data-scroll-target="#embedded-video">Embedded Video</a></li>
+  <li><a href="#mermaid-diagram" id="toc-mermaid-diagram" class="nav-link" data-scroll-target="#mermaid-diagram">Mermaid Diagram</a></li>
+  <li><a href="#book-reference" id="toc-book-reference" class="nav-link" data-scroll-target="#book-reference">Book Reference</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">simple_quarto_website</h1>
+<h1 class="title">Simple Quarto Website</h1>
 </div>
 
 
@@ -135,12 +198,105 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<section id="welcome" class="level1">
+<h1>Welcome</h1>
+<p>This page demonstrates required Quarto features for the lab.<br>
+We include headings, columns, lists, tables, math, images, video, Mermaid diagrams, and citations.[^why]</p>
+<section id="professional-overview" class="level2">
+<h2 class="anchored" data-anchor-id="professional-overview">Professional Overview</h2>
+<p>Some brief summary text. We can cite prior work like <span class="citation" data-cites="CITE_KEY_1">(<a href="#ref-CITE_KEY_1" role="doc-biblioref"><strong>CITE_KEY_1?</strong></a>)</span> to demonstrate bibliography integration.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="left-column" class="level3">
+<h3 class="anchored" data-anchor-id="left-column">Left Column</h3>
+<ul>
+<li>This is a bulleted list</li>
+<li>With multiple items</li>
+<li>Showing markdown basics</li>
+</ul>
+<p>Inline math example: the quadratic formula uses <span class="math inline">\(b^2 - 4ac\)</span> under a square root.</p>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="right-column" class="level3">
+<h3 class="anchored" data-anchor-id="right-column">Right Column</h3>
+<p>A short paragraph of placeholder text.</p>
+<blockquote class="blockquote">
+<p>“Good documentation is a love letter to your future self.”</p>
+</blockquote>
+</section>
+</div>
+</div>
+</section>
+<section id="table-example" class="level2">
+<h2 class="anchored" data-anchor-id="table-example">Table Example</h2>
+<p>A simple markdown table:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th style="text-align: center;">Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy</td>
+<td style="text-align: center;">0.93</td>
+<td>After tuning</td>
+</tr>
+<tr class="even">
+<td>F1 Score</td>
+<td style="text-align: center;">0.91</td>
+<td>Balanced classes</td>
+</tr>
+<tr class="odd">
+<td>Throughput</td>
+<td style="text-align: center;">120/s</td>
+<td>CPU-only baseline</td>
+</tr>
+</tbody>
+</table>
+<p>Display math (non-inline):</p>
+<p><span class="math display">\[
+\int_{0}^{1} x^2 \, dx \;=\; \frac{1}{3}
+\]</span></p>
+</section>
+<section id="images" class="level2">
+<h2 class="anchored" data-anchor-id="images">Images</h2>
+<p>Two embedded images from the local <code>images/</code> folder:</p>
+<p><img src="images/city.jpeg" class="img-fluid" style="width:48.0%" alt="City skyline"> <img src="images/spidey.jpeg" class="img-fluid" style="width:48.0%" alt="Spider-Man art"></p>
+</section>
+<section id="embedded-video" class="level2">
+<h2 class="anchored" data-anchor-id="embedded-video">Embedded Video</h2>
+<p>An embedded YouTube video using a responsive iframe:</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<p><iframe src="https://www.youtube.com/embed/ejFccNmL15g" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;"> </iframe></p>
+</div>
+</section>
+<section id="mermaid-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="mermaid-diagram">Mermaid Diagram</h2>
+<div class="mermaid">
+<p>flowchart TD A[Start] –&gt; B{Decision?} B –&gt;|Yes| C[Do this] B –&gt;|No| D[Do that instead] C –&gt; E[Finish] D –&gt; E[Finish]</p>
+</div>
+</section>
+<section id="book-reference" class="level2">
+<h2 class="anchored" data-anchor-id="book-reference">Book Reference</h2>
+<p>As noted by <span class="citation" data-cites="Anscombe_2006">Anscombe (<a href="#ref-Anscombe_2006" role="doc-biblioref">2006</a>)</span>, philosophy of mind has a long history.<br>
+More recently, ethical debates have been reframed in modern contexts <span class="citation" data-cites="Wood_2020">Wood (<a href="#ref-Wood_2020" role="doc-biblioref">2020</a>)</span>.</p>
 
 
 
-</main> <!-- /main -->
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Anscombe_2006" class="csl-entry" role="listitem">
+Anscombe, G. E. M. 2006. <em>Metaphysics and the Philosophy of Mind</em>. Royal National Institute for the Blind.
+</div>
+<div id="ref-Wood_2020" class="csl-entry" role="listitem">
+Wood, Nathan. 2020. <em>Virtue Rediscovered: Deontology, Consequentialism, and Virtue Ethics in the Contemporary Moral Landscape</em>. Lexington Books.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

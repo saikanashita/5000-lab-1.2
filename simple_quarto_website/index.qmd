@@ -1,7 +1,90 @@
 ---
-title: "simple_quarto_website"
+title: "Simple Quarto Website"
+toc: true
+bibliography: reference.bib
+format:
+  html:
+    theme: flatly
+    mermaid: {}
 ---
 
-This is a Quarto website.
+# Welcome
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This page demonstrates required Quarto features for the lab.  
+We include headings, columns, lists, tables, math, images, video, Mermaid diagrams, and citations.[^why]
+
+## Professional Overview
+
+Some brief summary text. We can cite prior work like @CITE_KEY_1 to demonstrate bibliography integration.
+
+::: { .columns }
+::: { .column width="50%" }
+### Left Column
+
+- This is a bulleted list
+- With multiple items
+- Showing markdown basics
+
+Inline math example: the quadratic formula uses $b^2 - 4ac$ under a square root.
+:::
+::: { .column width="50%" }
+### Right Column
+
+A short paragraph of placeholder text. 
+
+> “Good documentation is a love letter to your future self.”
+
+:::
+:::
+
+## Table Example
+
+A simple markdown table:
+
+| Metric       | Value | Notes              |
+|--------------|:-----:|--------------------|
+| Accuracy     | 0.93  | After tuning       |
+| F1 Score     | 0.91  | Balanced classes   |
+| Throughput   | 120/s | CPU-only baseline  |
+
+Display math (non-inline):
+
+$$
+\int_{0}^{1} x^2 \, dx \;=\; \frac{1}{3}
+$$
+
+## Images
+
+Two embedded images from the local `images/` folder:
+
+![City skyline](images/city.jpeg){width=48%}
+![Spider-Man art](images/spidey.jpeg){width=48%}
+
+## Embedded Video
+
+An embedded YouTube video using a responsive iframe:
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+  <iframe src="https://www.youtube.com/embed/ejFccNmL15g"
+          title="YouTube video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  </iframe>
+</div>
+
+## Mermaid Diagram
+
+::: {.mermaid}
+flowchart TD
+  A[Start] --> B{Decision?}
+  B -->|Yes| C[Do this]
+  B -->|No| D[Do that instead]
+  C --> E[Finish]
+  D --> E[Finish]
+:::
+
+## Book Reference
+As noted by @Anscombe_2006, philosophy of mind has a long history.  
+More recently, ethical debates have been reframed in modern contexts @Wood_2020.

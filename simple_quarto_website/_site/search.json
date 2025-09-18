@@ -9,8 +9,50 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "simple_quarto_website",
+    "title": "Simple Quarto Website",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This page demonstrates required Quarto features for the lab.\nWe include headings, columns, lists, tables, math, images, video, Mermaid diagrams, and citations.[^why]\n\n\nSome brief summary text. We can cite prior work like (CITE_KEY_1?) to demonstrate bibliography integration.\n\n\n\n\n\nThis is a bulleted list\nWith multiple items\nShowing markdown basics\n\nInline math example: the quadratic formula uses \\(b^2 - 4ac\\) under a square root.\n\n\n\n\nA short paragraph of placeholder text.\n\n“Good documentation is a love letter to your future self.”\n\n\n\n\n\n\n\nA simple markdown table:\n\n\n\nMetric\nValue\nNotes\n\n\n\n\nAccuracy\n0.93\nAfter tuning\n\n\nF1 Score\n0.91\nBalanced classes\n\n\nThroughput\n120/s\nCPU-only baseline\n\n\n\nDisplay math (non-inline):\n\\[\n\\int_{0}^{1} x^2 \\, dx \\;=\\; \\frac{1}{3}\n\\]\n\n\n\nTwo embedded images from the local images/ folder:\n \n\n\n\nAn embedded YouTube video using a responsive iframe:\n\n \n\n\n\n\n\nflowchart TD A[Start] –&gt; B{Decision?} B –&gt;|Yes| C[Do this] B –&gt;|No| D[Do that instead] C –&gt; E[Finish] D –&gt; E[Finish]\n\n\n\n\nAs noted by Anscombe (2006), philosophy of mind has a long history.\nMore recently, ethical debates have been reframed in modern contexts Wood (2020)."
+  },
+  {
+    "objectID": "index.html#professional-overview",
+    "href": "index.html#professional-overview",
+    "title": "Simple Quarto Website",
+    "section": "",
+    "text": "Some brief summary text. We can cite prior work like (CITE_KEY_1?) to demonstrate bibliography integration.\n\n\n\n\n\nThis is a bulleted list\nWith multiple items\nShowing markdown basics\n\nInline math example: the quadratic formula uses \\(b^2 - 4ac\\) under a square root.\n\n\n\n\nA short paragraph of placeholder text.\n\n“Good documentation is a love letter to your future self.”"
+  },
+  {
+    "objectID": "index.html#table-example",
+    "href": "index.html#table-example",
+    "title": "Simple Quarto Website",
+    "section": "",
+    "text": "A simple markdown table:\n\n\n\nMetric\nValue\nNotes\n\n\n\n\nAccuracy\n0.93\nAfter tuning\n\n\nF1 Score\n0.91\nBalanced classes\n\n\nThroughput\n120/s\nCPU-only baseline\n\n\n\nDisplay math (non-inline):\n\\[\n\\int_{0}^{1} x^2 \\, dx \\;=\\; \\frac{1}{3}\n\\]"
+  },
+  {
+    "objectID": "index.html#images",
+    "href": "index.html#images",
+    "title": "Simple Quarto Website",
+    "section": "",
+    "text": "Two embedded images from the local images/ folder:"
+  },
+  {
+    "objectID": "index.html#embedded-video",
+    "href": "index.html#embedded-video",
+    "title": "Simple Quarto Website",
+    "section": "",
+    "text": "An embedded YouTube video using a responsive iframe:"
+  },
+  {
+    "objectID": "index.html#mermaid-diagram",
+    "href": "index.html#mermaid-diagram",
+    "title": "Simple Quarto Website",
+    "section": "",
+    "text": "flowchart TD A[Start] –&gt; B{Decision?} B –&gt;|Yes| C[Do this] B –&gt;|No| D[Do that instead] C –&gt; E[Finish] D –&gt; E[Finish]"
+  },
+  {
+    "objectID": "index.html#book-reference",
+    "href": "index.html#book-reference",
+    "title": "Simple Quarto Website",
+    "section": "",
+    "text": "As noted by Anscombe (2006), philosophy of mind has a long history.\nMore recently, ethical debates have been reframed in modern contexts Wood (2020)."
   }
 ]
