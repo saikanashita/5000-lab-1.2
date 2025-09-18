@@ -7,3 +7,8 @@ To https://github.com/saikanashita/5000-lab-1.2
 [32mBrowse at [39m[4m[32mhttp://localhost:4858/[39m[24m
 Listening on http://127.0.0.1:4858/
 [32mGET: /[39m
+cd /Downloads/5000-lab.12
+printf "%s\n\n" "quarto render" >> commands.txt
+quarto render >> commands.txt > 2>&1
+printf "\n%s\n\n" 'rsync -avz --delete -e "ssh -o StrictHostKeyChecking=accept-new" _site/ nashitas@nashitasyed.georgetown.domains:~/public_html/_site/' >> commands.txt
+rsync -avz --delete -e "ssh -o StrictHostKeyChecking=accept-new" _site/ nashitas@nashitasyed.georgetown.domains:~/public_html/_site/ >> commands.txt 2?&1
